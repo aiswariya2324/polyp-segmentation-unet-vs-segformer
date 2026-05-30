@@ -1,4 +1,4 @@
-# 🔬 Polyp Segmentation: U-Net vs SegFormer on Kvasir-SEG
+#  Polyp Segmentation: U-Net vs SegFormer on Kvasir-SEG
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org)
@@ -10,7 +10,7 @@ A deep learning project comparing a **CNN-based U-Net** (ResNet50 encoder + scSE
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Results](#-results)
 - [Dataset](#-dataset)
@@ -23,7 +23,7 @@ A deep learning project comparing a **CNN-based U-Net** (ResNet50 encoder + scSE
 
 ---
 
-## 📊 Results
+##  Results
 
 | Metric | U-Net (ResNet50) | SegFormer-B2 | Winner |
 |--------|-----------------|--------------|--------|
@@ -40,7 +40,7 @@ A deep learning project comparing a **CNN-based U-Net** (ResNet50 encoder + scSE
 
 ---
 
-## 🗂 Dataset
+## Dataset
 
 **Kvasir-SEG** — 1,000 colonoscopy images with pixel-level polyp masks from Simula Research Laboratory.
 
@@ -59,7 +59,7 @@ The dataset downloads automatically (~168 MB) from Simula's servers when the not
 
 ---
 
-## 🧠 Models
+##  Models
 
 ### Model 1 — U-Net with ResNet50 + scSE Attention
 - **Architecture:** Encoder-decoder with skip connections (Ronneberger et al., 2015)
@@ -77,7 +77,7 @@ The dataset downloads automatically (~168 MB) from Simula's servers when the not
 
 ---
 
-## ⚙️ Methodology
+##  Methodology
 
 ### Loss Function
 **Combined Dice + BCE Loss** (α = 0.5):
@@ -105,7 +105,7 @@ IoU (Jaccard) · Dice (F1) · Precision · Recall · F2-Score · Specificity
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 **Environment:** Google Colab with T4 GPU
 **Estimated runtime:** ~45–60 minutes
@@ -129,7 +129,7 @@ matplotlib  seaborn  Pillow  pandas  numpy
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 polyp-segmentation/
@@ -150,7 +150,7 @@ polyp-segmentation/
 
 ---
 
-## 🔍 Key Findings
+##  Key Findings
 
 1. **SegFormer-B2 outperforms U-Net on all metrics** — global self-attention captures long-range context that CNN skip connections cannot, which is critical for irregularly shaped polyps.
 
@@ -164,13 +164,13 @@ polyp-segmentation/
 
 ---
 
-## 🛠 Technologies
+##  Technologies
 
 `Python` · `PyTorch` · `HuggingFace Transformers` · `segmentation-models-pytorch` · `Albumentations` · `torchmetrics` · `scikit-learn` · `Matplotlib` · `Seaborn` · `Google Colab`
 
 ---
 
-## 📚 References
+##  References
 
 - Ronneberger, O., Fischer, P., & Brox, T. (2015). U-Net: Convolutional Networks for Biomedical Image Segmentation. *MICCAI*.
 - Xie, E., Wang, W., Yu, Z., Anandkumar, A., Alvarez, J.M., & Luo, P. (2021). SegFormer: Simple and Efficient Design for Semantic Segmentation with Transformers. *NeurIPS*.
